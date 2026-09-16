@@ -216,4 +216,4 @@ Hacktiv8
 
 ## ⭐ Repository
 
-Repository ini dibuat sebagai dokumentasi proses pembelajaran dan implementasi berbagai metode **Data Science & Machine Learning** MSIB di Hactib menggunakan Python.
+Repository ini dibuat sebagai dokumentasi proses pembelajaran dan implementasi berbagai metode **Data Science & Machine Learning** MSIB di Hactiv menggunakan Python.
