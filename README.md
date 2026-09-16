@@ -1,105 +1,219 @@
-# 🌦️ Weather Prediction — Logistic Regression & SVM
+# 📊 Project Data Science – Hacktiv8
 
-Project Machine Learning untuk memprediksi Turunnya hujan berdasarkan data cuaca dari berbagai weather station Australia
+Repository ini berisi kumpulan project **Data Science dan Machine Learning** yang dikerjakan sebagai bagian dari pembelajaran di Hacktiv8.
 
-Project ini membandingkan dua algoritma klasifikasi:
+Project di dalam repository mencakup beberapa permasalahan Data Science, mulai dari **regression, classification, clustering, hingga prediksi**, dengan menggunakan beberapa algoritma Machine Learning.
 
-- Logistic Regression
+---
+
+## 📁 Daftar Project
+
+| No | Project | Algoritma / Metode | Jenis |
+|---|---|---|---|
+| 1 | [Analisis Pengaruh Harga Uber & Lyft](#1-analisis-pengaruh-harga-uber--lyft) | Linear Regression | Regression |
+| 2 | [Analisis Segmentasi Pengguna Kartu Kredit](#2-analisis-segmentasi-pengguna-kartu-kredit) | K-Means, PCA | Clustering |
+| 3 | [Klasifikasi Data Rekam Medis](#3-klasifikasi-data-rekam-medis) | Classification & Comparison of ML Algorithms | Classification |
+| 4 | [Prediksi Cuaca Hujan](#4-prediksi-cuaca-hujan) | SVM, Linear Regression | Prediction / Regression |
+
+---
+
+# 🚕 1. Analisis Pengaruh Harga Uber & Lyft
+
+**File:** `Analisis Pengaruh harga Uber&Lyft - Linear Regression.ipynb`
+
+Project ini menganalisis hubungan antara variabel-variabel yang terdapat pada data perjalanan Uber dan Lyft dengan harga perjalanan.
+
+### 🔍 Metode
+
+- Data preprocessing
+- Exploratory Data Analysis (EDA)
+- Linear Regression
+- Evaluasi model
+
+### 🎯 Tujuan
+
+Menganalisis pengaruh variabel tertentu terhadap harga layanan Uber dan Lyft serta membangun model regresi untuk memahami hubungan antarvariabel.
+
+### 🧠 Algoritma
+
+**Linear Regression**
+
+---
+
+# 💳 2. Analisis Segmentasi Pengguna Kartu Kredit
+
+**File:** `Analisis Segmentasi Pengguna kartu kredit.ipynb`
+
+Project ini melakukan segmentasi pengguna kartu kredit berdasarkan karakteristik dan pola penggunaan kartu.
+
+### 🔍 Metode
+
+- Data preprocessing
+- Data standardization
+- Exploratory Data Analysis
+- K-Means Clustering
+- Elbow Method
+- Silhouette Score
+- Principal Component Analysis (PCA)
+- Interpretasi hasil cluster
+
+### 🧠 Algoritma
+
+**K-Means Clustering**
+
+K-Means digunakan untuk mengelompokkan pengguna kartu kredit ke dalam beberapa segmen berdasarkan karakteristik penggunaan mereka.
+
+Dalam project ini digunakan **3 cluster** setelah melakukan evaluasi jumlah cluster menggunakan Elbow Method dan Silhouette Score.
+
+### 📊 PCA
+
+**Principal Component Analysis (PCA)** digunakan sebagai metode reduksi dimensi/transformasi data untuk membantu analisis dan visualisasi hasil clustering.
+
+### 🎯 Hasil Segmentasi
+
+Pengguna kartu kredit dikelompokkan menjadi beberapa karakteristik, antara lain:
+
+- Pengguna dengan limit kredit rendah dan jarang memperbarui isi saldo
+- Pengguna dengan limit kredit rata-rata dan cukup sering memperbarui isi saldo
+- Pengguna dengan limit kredit tinggi dan sering memperbarui isi saldo
+
+---
+
+# 🏥 3. Klasifikasi Data Rekam Medis
+
+**File:** `Klasifikasi Data Rekam Medis.ipynb`
+
+Project ini berfokus pada penerapan Machine Learning untuk melakukan **klasifikasi pada data rekam medis**.
+
+### 🔍 Metode
+
+- Data preprocessing
+- Exploratory Data Analysis (EDA)
+- Pembagian data training dan testing
+- Model classification
+- Perbandingan performa algoritma
+- Evaluasi model
+
+### 📈 Evaluasi
+
+Beberapa metrik yang digunakan dalam proses evaluasi model antara lain:
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Confusion Matrix
+- Classification Report
+
+### 🎯 Tujuan
+
+Membangun dan membandingkan model Machine Learning untuk melakukan klasifikasi berdasarkan data rekam medis.
+
+---
+
+# 🌧️ 4. Prediksi Cuaca Hujan
+
+**File:** `Prediksi Cuaca Hujan - SVM&LinearRegression.ipynb`
+
+Project ini membahas penerapan Machine Learning pada data cuaca untuk melakukan prediksi yang berkaitan dengan kondisi hujan.
+
+### 🔍 Metode
+
+- Data preprocessing
+- Exploratory Data Analysis
+- Data splitting
 - Support Vector Machine (SVM)
+- Linear Regression
+- Evaluasi model
 
-## 📊 Dataset
+### 🧠 Algoritma
 
-Dataset yang digunakan adalah **Weather Australia (`weatherAUS.csv`)** dengan:
+**Support Vector Machine (SVM)**  
+Digunakan sebagai salah satu pendekatan Machine Learning dalam melakukan prediksi berdasarkan data cuaca.
 
-- 145,460 data
-- 23 features kolom
-- Target: `RainTomorrow`
+**Linear Regression**  
+Digunakan sebagai pendekatan regresi dalam project.
 
-Target memiliki dua kelas:
+### 🎯 Tujuan
 
-- `Yes` → Hujan
-- `No` → Tidak Hujan
+Menganalisis data cuaca dan menerapkan algoritma Machine Learning untuk melakukan prediksi terkait kondisi hujan.
 
-## ⚙️ Workflow
+---
 
-```text
-Data Collection
-      ↓
-Data Cleaning
-      ↓
-EDA
-      ↓
-Preprocessing
-      ↓
-Feature Engineering
-      ↓
-Train-Test Split
-      ↓
-Feature Scaling
-      ↓
-Model Training
-      ↓
-Model Evaluation
-      ↓
-Model Comparison
-🤖 Model Performance
-```
-## Output dan Kesimpulan
-```text
-Akurasi Model
-Logistic Regression	84.07%
-SVM	83.98%
+# 🛠️ Tools & Libraries
 
-Logistic Regression kemudian digunakan untuk proses deployment dan inference.
+Project-project dalam repository ini menggunakan ekosistem Python untuk Data Science dan Machine Learning.
 
-Precesion
-*   Untuk kelas 0, precision sekitar 86%, menunjukkan bahwa sekitar 86% dari prediksi positif untuk kelas 0 adalah benar. Ini mengindikasikan model memiliki kemampuan yang baik untuk mengidentifikasi kelas 0.
-*   Untuk kelas 1, precision sekitar 72%, menunjukkan bahwa sekitar 72% dari prediksi positif untuk kelas 1 adalah benar.Ini mengindikasikan model memiliki kemampuan yang baik untuk mengidentifikasi kelas 1.
+Beberapa library yang digunakan antara lain:
 
-Recall
-*   Untuk kelas 0, recall sangat tinggi, sekitar 95%, menunjukkan bahwa model berhasil mengidentifikasi sekitar 95% dari semua instance yang sebenarnya milik kelas 0.
-*   Untuk kelas 1, recall lebih rendah, sekitar 43%, menunjukkan bahwa model hanya berhasil mengidentifikasi sekitar 43% dari semua instance yang sebenarnya milik kelas 1.
-
-F1-Score
-*   Untuk kelas 0, F1-score sekitar 90%, menunjukkan keseimbangan yang baik antara precision dan recall.
-*   Untuk kelas 1, F1-score sekitar 54%, menunjukkan ada ruang untuk perbaikan dalam keseimbangan antara precision dan recall untuk kelas ini.
-
-Akurasi
-*   Akurasi keseluruhan model adalah  84%, yang merupakan rasio instans yang diprediksi dengan benar dibandingkan dengan total instans.
-
-
-KESIMPULAN
-
-*   Dari tahun ke tahun untuk rata-rata temperatur maksimum dan temperatur minimum fluktuatif. Namun, temperatur maksimum dan temperatur minimum terendah ada pada tahun 2012.
-
-*   lokasi dengan frekuensi hujan paling banyak adalah Portland,sedangkan Rata-rata banyakya turun hujan adalah di Townsville dengan rata-rata curah hujan sebesar 20.08mm selama 10 tahun terakhir.
-
-*   Kolom yang dibuang saat melakukan modelling adalah kolom Date, month, year, dan location karena tidak berpengaruh pada prediksi. Selain itu, WindDir9am dan WindDir3pm dibuang karena telah direpresentasikan oleh kolom WindGustDir.
-
-*   Akurasi testing data dari kedua model lebih rendah dibandingkan training data. Maka kedua model termasuk underfitting.
-
-*   Untuk Deployment menggunakan model Logistic Regression karena akurasi data testing yang lebih tinggi dibandingkan model SVM.
-
-*  Dari hasil deployment menggunakan LR diketahui bahwa model ini memiliki presisi yang relatif tinggi untuk kelas 0 dan presisi yang lebih rendah untuk kelas 1. Meskipun model memiliki recall yang tinggi untuk kelas 0, recall untuk kelas 1 lebih rendah.
-```
-
-## 🛠️ Tech Stack
 - Python
 - Pandas
 - NumPy
-- Scikit-learn
 - Matplotlib
 - Seaborn
+- Scikit-learn
 - SciPy
-- Statsmodels
 - Jupyter Notebook / Google Colab
 
+---
 
-Clone repository:
+# 🤖 Machine Learning Methods
 
-git clone https://github.com/ilhamYusuf03/H8_PYTN-Ks20-06_5.git
+Secara keseluruhan, repository ini mencakup beberapa metode Machine Learning:
 
+### Regression
+- Linear Regression
 
-👤 Author
+### Classification
+- Classification Algorithms
+- Support Vector Machine (SVM)
 
-Ilham Yusuf
+### Clustering
+- K-Means Clustering
+
+### Dimensionality Reduction
+- Principal Component Analysis (PCA)
+
+### Model Evaluation
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Confusion Matrix
+- Silhouette Score
+- Elbow Method
+
+---
+
+# 📚 Skills yang Dipelajari
+
+Melalui project-project dalam repository ini, beberapa konsep Data Science yang dipraktikkan meliputi:
+
+- Data Cleaning
+- Data Preprocessing
+- Exploratory Data Analysis (EDA)
+- Data Visualization
+- Feature Scaling
+- Feature Analysis
+- Regression
+- Classification
+- Clustering
+- Dimensionality Reduction
+- Model Evaluation
+- Model Comparison
+- Data Interpretation
+
+---
+
+# 👨‍💻 Author
+
+**IlhamYusuff**
+
+Data Science / Machine Learning Project  
+Hacktiv8
+
+---
+
+## ⭐ Repository
+
+Repository ini dibuat sebagai dokumentasi proses pembelajaran dan implementasi berbagai metode **Data Science & Machine Learning** menggunakan Python.
